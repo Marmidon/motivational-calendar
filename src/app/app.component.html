@@ -1,37 +1,39 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="container">
-    <div class="header clearfix">
-      <h3 class="text-muted">Motivational calendar - make every week count</h3>
-    </div>
-
-    <div class="jumbotron">
-      <h4 class="display-4">Get a calendar with a number of weeks</h4>
-      <hr/>
-      <app-birthday-date></app-birthday-date>
-      <div class='row'>
-        <div class='col col-xs12'>
-          <p class="beforeText">Target age</p>
-          <ng-select class="mySelect" [clearable]="false" [items]="targetAges" bindLabel="name" bindValue="id" placeholder="Years old" [(ngModel)]="targetAge"></ng-select>
-        </div>
-      </div>
-      <p><a class="btn btn-lg btn-success" href="javascript:;" role="button" (click)="generate()">Generate</a></p>
-      <br>
-      <hr>
-      <div class="float-right social-share">
-          <a target="_blank" href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.3eesho.com/magazine/index.html" data-text="issue2 now" data-via="3eesho" data-hashtags="ipad,health,arabicmagazine">Tweet</a>
-          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-          <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
-          <script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script>
-          <script type="IN/Share"></script>
-      </div>
-
-    </div>
-    <div id="result">
-        <app-result-panel  [hidden]="!showResult" [birthDate]="birthday" [targetAge]="targetAgeToPassToResult"></app-result-panel>
-    </div>
-    <footer>
-      <hr>
-      <p>© Mykyta Stenko 2018</p>
-    </footer>
+  <div class="header clearfix">
+    <h3 class="text-muted">Motivational calendar - make every week count</h3>
   </div>
 
+  <div class="jumbotron">
+    <h4 class="display-4">Get a calendar with a number of weeks</h4>
+    <hr/>
+    <app-birthday-date></app-birthday-date>
+    <div class='row'>
+      <div class='col col-xs12'>
+        <p class="beforeText">Target age</p>
+        <ng-select class="mySelect" [clearable]="false" [items]="targetAges" bindLabel="name" bindValue="id" placeholder="Years old"
+          [(ngModel)]="targetAge"></ng-select>
+      </div>
+    </div>
+    <p>
+      <a class="btn btn-lg btn-success" href="javascript:;" role="button" (click)="generate()">Generate</a>
+    </p>
+    <br>
+    <hr>
+    <div class="float-right social-share">
+        <share-buttons [theme]="'default'"
+        [include]="['facebook','twitter','google','linkedin','reddit']"
+        [show]="5"
+       ></share-buttons>
+    </div>
+
+  </div>
+  <div id="result">
+    <app-result-panel [hidden]="!showResult" [birthDate]="birthday" [targetAge]="targetAgeToPassToResult"></app-result-panel>
+  </div>
+  <footer>
+    <hr>
+    <p>© Mykyta Stenko 2018</p>
+  </footer>
+
+</div>

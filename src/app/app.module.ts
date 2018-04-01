@@ -7,6 +7,8 @@ import { BirthdayDateComponent } from './birthday-date/birthday-date.component';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { EventEmitter } from '@angular/core';
 import { ResultPanelComponent } from './result-panel/result-panel.component';
+import { ShareButtonsModule } from '@ngx-share/buttons';
+import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,10 @@ import { ResultPanelComponent } from './result-panel/result-panel.component';
     BrowserModule,
     NgbModule.forRoot(),
     FormsModule,
-    NgSelectModule
+    NgSelectModule,
+    HttpClientModule,       // for share counts
+    HttpClientJsonpModule,  // for linkedin and tumblr share counts
+    ShareButtonsModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
