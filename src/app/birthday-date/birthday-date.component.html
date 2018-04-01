@@ -1,4 +1,6 @@
-<label>Date of Birth</label>
+<br>
+<h6 class="display-6">Enter your date of birth</h6>
+<br>
 <div class="row">
   <div class="col col-lg-4">
     <ng-select [clearable]="false" [items]="calendar.days" bindLabel="name" bindValue="id" placeholder="Day" [(ngModel)]="dateOfBirth.day"></ng-select>
@@ -10,3 +12,4 @@
     <ng-select [clearable]="false" [items]="calendar.years" bindLabel="name" bindValue="id" placeholder="Year" [(ngModel)]="dateOfBirth.year"></ng-select>
   </div>
 </div>
+<br>

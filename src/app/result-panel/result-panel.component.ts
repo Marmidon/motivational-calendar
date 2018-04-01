@@ -37,12 +37,20 @@ export class ResultPanelComponent implements OnChanges {
     popupWin.document.write(`
       <html>
         <head>
-          <title>${printTitle}</title>
+          <title></title>
           <style>
-          //........Customized style.......
+           .text {
+            text-align: center;
+           }
           </style>
         </head>
-      <body onload="window.print();window.close()">${printContents}</body>
+      <body onload="window.print();window.close()">
+        <div class="text">
+          <h4>Weeks until I am ${this.targetAge}</h4>
+          <p>Make every week count!</p>
+        </div>
+          ${printContents}
+      </body>
       </html>`
     );
     popupWin.document.close();
