@@ -1,0 +1,20 @@
+<!--
+<p>
+  You will reach
+</p>
+<p>
+  {{weeksPassedBetweenBirthAndNow}} weeks passed since your birth
+</p>
+<p>
+  {{weeksRemaining}} remaining until {{targetAge}}
+</p>
+-->
+
+<div class="card" style="width: 100%;">
+    <div class="card-body">
+      <h4 class="card-title"><span id="print-title">I will be {{targetAge}} on {{target_date.format('MMM Do YYYY')}}</span> <a class="btn btn-lg btn-success float-right" href="javascript:;" role="button" (click)="print()">Print</a></h4>
+      <h6 class="card-subtitle mb-2 text-muted">{{weeksPassedBetweenBirthAndNow}} weeks passed, {{weeksRemaining}} to go</h6>
+        <div class="card-text"></div>
+        <ngb-panel id="printable"><img src="assets\img\Checked.png" alt="" *ngFor="let num of weeksPassedArray"><img src="assets\img\Unchecked.png" alt="" *ngFor="let num of weeksRemainingArray"></ngb-panel>
+    </div>
+  </div>

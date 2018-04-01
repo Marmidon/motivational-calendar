@@ -1,0 +1,12 @@
+<label>Date of Birth</label>
+<div class="row">
+  <div class="col col-lg-4">
+    <ng-select [clearable]="false" [items]="calendar.days" bindLabel="name" bindValue="id" placeholder="Day" [(ngModel)]="dateOfBirth.day"></ng-select>
+  </div>
+  <div class="col col-lg-4">
+    <ng-select [clearable]="false" [items]="calendar.months" bindLabel="name" bindValue="id" placeholder="Month" [(ngModel)]="dateOfBirth.month"></ng-select>
+  </div>
+  <div class="col col-lg-4">
+    <ng-select [clearable]="false" [items]="calendar.years" bindLabel="name" bindValue="id" placeholder="Year" [(ngModel)]="dateOfBirth.year"></ng-select>
+  </div>
+</div>
