@@ -1,13 +1,8 @@
-@import "~@fortawesome/fontawesome-free-webfonts/css/fa-brands.css";
-@import "~@fortawesome/fontawesome-free-webfonts/css/fa-solid.css";
-@import "~@fortawesome/fontawesome-free-webfonts/css/fontawesome.css";
-@import '~@ngx-share/button/styles/share-buttons.css';
-@import '~@ngx-share/button/styles/themes/default/default-theme.css';
+
 p {
   display: inline-block;
   vertical-align: middle;
   line-height: normal;
-  margin: auto;
 }
 .mySelect {
   display: inline-block !important;
