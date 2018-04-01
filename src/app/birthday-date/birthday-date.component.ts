@@ -32,7 +32,6 @@ export class BirthdayDateComponent implements OnInit {
       this.calendar.years.push(i);
     }
     this.calendar.months = moment.months();
-    console.log(this.calendar.months);
     this.dateOfBirth.month = this.calendar.months[0];
   }
 

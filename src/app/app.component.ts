@@ -27,6 +27,13 @@ export class AppComponent {
     this.target_date = moment(this.birthday);
     this.target_date.add(this.targetAge, 'years');
     this.weeks = this.birthday.diff(this.target_date, 'weeks');
+    let now = moment();
+    this.weeksRemaining = this.target_date.diff(now, 'weeks');
+    if (this.weeksRemaining <= 0) {
+      this.targetAge = this.targetAges[this.targetAges.length - 1];
+      this.generate();
+      return;
+    }
     this.showResult = true;
     this.targetAgeToPassToResult = this.targetAge;
   };
