@@ -21,15 +21,19 @@
 
     <br>
     <hr>
-      <div class = "font-weight-light">
-        <p>Print the generated page, put it on the wall and track every week. </p>
-        <p>For better results, make a list of goals you would like to achieve before you turn {{targetAge}}</p>
+    <div class="font-weight-light">
+      <p>Print the generated page, put it on the wall and track every week. </p>
+      <p>For better results, make a list of goals you would like to achieve before you turn {{targetAge}}</p>
+    </div>
+    <div class="row">
+      <div class="col col-12">
+          <div class="float-right social-share">
+              <share-buttons [theme]="'default'" [include]="['facebook','twitter','google','linkedin','reddit']" [show]="5">
+              </share-buttons>
+          </div>
+
+
       </div>
-    <div class="float-right social-share">
-      <share-buttons [theme]="'default'"
-        [include]="['facebook','twitter','google','linkedin','reddit']"
-        [show]="5">
-      </share-buttons>
     </div>
 
   </div>
