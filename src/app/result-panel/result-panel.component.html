@@ -11,6 +11,6 @@
 
       <h6 class="card-subtitle mb-2 text-muted">{{weeksPassedBetweenBirthAndNow}} weeks passed, {{weeksRemaining}} to go</h6>
         <div class="card-text"></div>
-        <ngb-panel id="printable"><img src="assets\img\Checked.png" alt="" *ngFor="let num of weeksPassedArray"><img src="assets\img\Unchecked.png" alt="" *ngFor="let num of weeksRemainingArray"></ngb-panel>
+        <ngb-panel id="printable"><img src="assets\img\Checked.png" alt="" *ngFor="let num of weeksPassedArray"><img src="assets\img\Unchecked.png" alt="" *ngFor="let num of weeksRemainingArray; let last = last" [attr.loading]="last ? false : true"></ngb-panel>
     </div>
   </div>

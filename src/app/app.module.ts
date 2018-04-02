@@ -9,6 +9,7 @@ import { EventEmitter } from '@angular/core';
 import { ResultPanelComponent } from './result-panel/result-panel.component';
 import { ShareButtonsModule } from '@ngx-share/buttons';
 import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
+import { LoadingModule } from 'ngx-loading';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
     NgSelectModule,
     HttpClientModule,       // for share counts
     HttpClientJsonpModule,  // for linkedin and tumblr share counts
-    ShareButtonsModule.forRoot()
+    ShareButtonsModule.forRoot(),
+    LoadingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

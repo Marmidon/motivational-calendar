@@ -14,6 +14,7 @@ export class AppComponent {
   target_date;
   weeks;
   showResult = false;
+  loading = false;
   targetAges = [
     60,
     65,
@@ -23,6 +24,7 @@ export class AppComponent {
   ];
   targetAgeToPassToResult;
   public generate = function() {
+    this.loading = true;
     this.birthday = this.birthdayComponent.GetDateOfBirth();
     this.target_date = moment(this.birthday);
     this.target_date.add(this.targetAge, 'years');
@@ -36,5 +38,6 @@ export class AppComponent {
     }
     this.showResult = true;
     this.targetAgeToPassToResult = this.targetAge;
+    this.loading = false;
   };
 }

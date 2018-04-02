@@ -27,19 +27,19 @@
     </div>
     <div class="row">
       <div class="col col-12">
-          <div class="float-right social-share">
-              <share-buttons [theme]="'default'" [include]="['facebook','twitter','google','linkedin','reddit']" [show]="5">
-              </share-buttons>
-          </div>
-
-
+        <div class="float-right social-share">
+          <share-buttons [theme]="'default'" [include]="['facebook','twitter','google','linkedin','reddit']" [show]="5">
+          </share-buttons>
+        </div>
       </div>
     </div>
 
+
   </div>
   <div id="result">
-    <app-result-panel [hidden]="!showResult" [birthDate]="birthday" [targetAge]="targetAgeToPassToResult"></app-result-panel>
+    <app-result-panel [(loading)]="loading" [hidden]="!showResult" [birthDate]="birthday" [targetAge]="targetAgeToPassToResult"></app-result-panel>
   </div>
+  <ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '14px' }"></ngx-loading>
   <footer>
     <hr>
     <p>© Mykyta Stenko 2018</p>

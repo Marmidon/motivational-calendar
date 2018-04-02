@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, OnChanges, NgModule } from '@angular/core';
+import { Component, OnInit, Input, OnChanges, NgModule, Output, EventEmitter } from '@angular/core';
 import * as moment from 'moment';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import * as $ from 'jquery';
@@ -15,9 +15,16 @@ import * as $ from 'jquery';
   ]
 })
 
+
+
+
 export class ResultPanelComponent implements OnChanges {
   @Input() birthDate: moment.Moment;
   @Input() targetAge: number;
+  @Output()
+    loadingChange: EventEmitter<boolean> = new EventEmitter<boolean>();
+  @Input()
+    loading: boolean;
   target_date: moment.Moment;
   weeksPassedBetweenBirthAndNow;
   weeksBetweenBirthAndTarget;
@@ -73,6 +80,7 @@ export class ResultPanelComponent implements OnChanges {
       for (let i = 1; i <= this.weeksRemaining; i++) {
         this.weeksRemainingArray.push(i);
       }
+      this.loadingChange.emit(this.loading);
     }
   }
 
