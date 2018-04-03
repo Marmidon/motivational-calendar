@@ -50,6 +50,12 @@ export class ResultPanelComponent
            .text {
             text-align: center;
            }
+           p {
+             margin: 5px;
+           }
+           h4 {
+             margin-bottom: 10px;
+           }
           </style>
         </head>
       <body onload="window.print();window.close()">
