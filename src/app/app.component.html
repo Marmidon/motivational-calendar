@@ -3,9 +3,7 @@
   <div class="header clearfix">
     <h3 class="text-muted">Motivational calendar - make every week count</h3>
   </div>
-  <div id="result">
-      <app-result-panel [(loading)]="loading"></app-result-panel>
-  </div>
+
   <div class="jumbotron">
     <ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '14px' }"></ngx-loading>
     <h4 class="display-4">Get a calendar with a number of weeks</h4>
@@ -39,7 +37,9 @@
 
 
   </div>
-
+  <div id="result">
+      <app-result-panel [(loading)]="loading"></app-result-panel>
+  </div>
 
   <footer>
     <hr>

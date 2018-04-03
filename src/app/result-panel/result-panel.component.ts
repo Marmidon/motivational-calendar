@@ -89,11 +89,12 @@ export class ResultPanelComponent
     for (let i = 1; i <= this.weeksRemaining; i++) {
       $("#printable").append('<img src="assets\\img\\Unchecked.png" alt="">');
     }
-    if (document.getElementById("print-title")) {
+    setTimeout(function() {
       document
-        .getElementById("print-title")
-        .scrollIntoView({ behavior: "smooth" });
-    }
+      .getElementById("print-title")
+      .scrollIntoView({ behavior: "smooth" });
+    } , 500);
+
     this.loadingChange.emit(false);
 
     this.show = true;
