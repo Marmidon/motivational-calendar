@@ -3,8 +3,11 @@
   <div class="header clearfix">
     <h3 class="text-muted">Motivational calendar - make every week count</h3>
   </div>
-
+  <div id="result">
+      <app-result-panel [(loading)]="loading"></app-result-panel>
+  </div>
   <div class="jumbotron">
+    <ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '14px' }"></ngx-loading>
     <h4 class="display-4">Get a calendar with a number of weeks</h4>
     <hr/>
     <app-birthday-date></app-birthday-date>
@@ -36,10 +39,8 @@
 
 
   </div>
-  <div id="result">
-    <app-result-panel [(loading)]="loading" [hidden]="!showResult" [birthDate]="birthday" [targetAge]="targetAgeToPassToResult"></app-result-panel>
-  </div>
-  <ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '14px' }"></ngx-loading>
+
+
   <footer>
     <hr>
     <p>© Mykyta Stenko 2018</p>
