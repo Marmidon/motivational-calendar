@@ -66,7 +66,6 @@ export class ResultPanelComponent
   ngOnChanges() {}
 
   public generateResult(_birthDate: moment.Moment, _targetAge: number) {
-    this.show = false;
     this.birthDate = _birthDate;
     this.targetAge = _targetAge;
 
